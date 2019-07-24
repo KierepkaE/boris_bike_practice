@@ -12,4 +12,7 @@ class DockingStation
   def dock(bike)
   end
 
+  def bike
+  end
+
 end
