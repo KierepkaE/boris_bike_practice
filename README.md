@@ -1,4 +1,4 @@
-# Title of project
+# Boris bike project.
 
 Emulating bike rental system that is in use in London.
 
