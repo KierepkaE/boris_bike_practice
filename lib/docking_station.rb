@@ -9,14 +9,24 @@ class DockingStation
   attr_reader :bikes, :bike
 
   def dock(bike)
-    fail 'Docking station is full' if @bikes.count >= 20
+    fail 'Docking station is full' if full?
     @bikes << bike
     bike
   end
 
   def release_bike
-    fail 'No bikes available' if @bikes.empty?
+    fail 'No bikes available' if empty?
     @bikes.pop
+  end
+
+  private
+
+  def empty?
+    @bikes.empty?
+  end
+
+  def full?
+    @bikes.count >= 20
   end
 
 end
