@@ -9,7 +9,7 @@ class DockingStation
   end
 
   attr_reader :bikes, :bike
-  attr_writer :capacity
+  attr_accessor :capacity
 
   def dock(bike)
     fail 'Docking station is full' if full?
